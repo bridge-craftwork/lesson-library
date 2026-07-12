@@ -1,0 +1,43 @@
+name: Lint lessons
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+# CI lint is the required status check for the library: it validates that every
+# lesson's DSL parses, hands are legal, front matter is complete, and skill
+# paths exist in the taxonomy. The validator lives in lesson-studio (which owns
+# the DSL grammar), so we check it out and run its lint against these lessons.
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout lesson-library
+        uses: actions/checkout@v4
+
+      - name: Checkout lesson-studio (DSL grammar + lint tool)
+        uses: actions/checkout@v4
+        with:
+          repository: bridge-craftwork/lesson-studio
+          path: _lesson-studio
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: _lesson-studio/package-lock.json
+
+      - name: Install lesson-studio
+        run: npm ci
+        working-directory: _lesson-studio
+        env:
+          # The print-view PDF browser isn't needed to lint.
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+
+      - name: Lint lessons
+        run: npm run lint:lessons -- ../lessons
+        working-directory: _lesson-studio
