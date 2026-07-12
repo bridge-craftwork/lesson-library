@@ -9,8 +9,6 @@ status: draft
 reviewed-by: self
 ---
 
-# New Minor Forcing
-
 **New Minor Forcing (NMF)** solves a common problem: after opener rebids 1NT,
 responder has game-going values and a five-card major but doesn't yet know
 whether opener holds three-card support. Bidding the *other* minor — the "new

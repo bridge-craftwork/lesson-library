@@ -14,8 +14,6 @@ status: draft
 reviewed-by: self
 ---
 
-# Lessons 1–6: A Beginner's Bidding Summary
-
 A one-page refresher of the opening bids, responses, and simple competition from
 your first six lessons. Count **high-card points** first — A=4, K=3, Q=2, J=1 —
 and add length as the auction develops.
