@@ -12,6 +12,7 @@ level: basic
 author: Rick Wilson
 status: draft
 reviewed-by: self
+columns: 3
 ---
 
 A one-page refresher of the opening bids, responses, and simple competition from
