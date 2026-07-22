@@ -22,7 +22,7 @@ was too weak or wrong-shaped to open 1NT. Responder then bids the unbid minor:
 ```auction
 dealer: N
 1C   P    1S   P
-1NT  P    2D^1 P
+1NT  P    2D =1= P
 ---
 1. New Minor Forcing — artificial and game-forcing. Says nothing about diamonds.
 ```
@@ -59,8 +59,8 @@ Opposite three-card support, responder drives to the major-suit game:
 ```auction
 dealer: N
 1C   P    1S   P
-1NT  P    2D^1 P
-2S^2 P    4S   P
+1NT  P    2D =1= P
+2S =2= P    4S   P
 ---
 1. New Minor Forcing
 2. Three-card spade support
