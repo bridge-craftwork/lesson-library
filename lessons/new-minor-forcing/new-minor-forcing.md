@@ -5,8 +5,9 @@ skill_paths:
 primary: bidding_conventions/new_minor_forcing
 level: intermediate
 author: Rick Wilson
-status: draft
+status: published
 reviewed-by: self
+columns: 3
 ---
 
 **New Minor Forcing (NMF)** solves a common problem: after opener rebids 1NT,
@@ -21,10 +22,13 @@ was too weak or wrong-shaped to open 1NT. Responder then bids the unbid minor:
 
 ```auction
 dealer: N
+columns: 2
+labels: Opener, Responder
+grid: off
 1C   P    1S   P
 1NT  P    2D =1= P
 ---
-1. New Minor Forcing — artificial and game-forcing. Says nothing about diamonds.
+1. New Minor Forcing — artificial and invitational. Says nothing about diamonds.
 ```
 
 With this hand, responder wants the best game: 4♠ if opener has three spades,
@@ -40,16 +44,16 @@ C: J 8 4
 
 ## Opener's rebids
 
-Opener answers the question — three-card support for responder's major, the
-other major, or neither:
+Opener answers the question — cheaply with 12 or 13 HCP, or with a jump with 14 HCP:
 
 ```response-box
-title: Opener's rebids after 1♣–1♠–1NT–2♦
-2H | Four hearts (the unshown major); denies three spades
-2S | Three-card spade support
-2NT | Minimum, no three spades and no four hearts
-3S | Maximum with three-card spade support
-3NT | Maximum, no three spades and no four hearts
+title: Opener's rebids after 1♣–1♠–1NT–2♦!
+2H/3H | Four hearts - top priority
+2S/3S | Three-card spade support
+2NT/3NT | Heart stopper
+3D | 4 diamonds
+3C | 5 clubs
+Jump | With 14 HCP
 ```
 
 ## Putting it together
@@ -57,18 +61,23 @@ title: Opener's rebids after 1♣–1♠–1NT–2♦
 Opposite three-card support, responder drives to the major-suit game:
 
 ```auction
+columns: 2
+labels: Opener, Responder
+grid: off
 dealer: N
 1C   P    1S   P
 1NT  P    2D =1= P
 2S =2= P    4S   P
 ---
 1. New Minor Forcing
-2. Three-card spade support
+2. Three-card spade support, 12-13 HCP
 ```
 
 ## Remember
 
-- NMF is **only** on after a **1NT rebid** by opener — not after every 1NT.
-- The new minor promises **nothing** in that minor; it is pure convention.
-- Responder needs at least invitational values. Weaker hands pass 1NT or sign
+* NMF is **only** on after a **1NT rebid** by opener — not after every 1NT.
+
+* The new minor promises **nothing** in that minor; it is pure convention.
+
+* Responder needs at least invitational values. Weaker hands pass 1NT or sign
   off in a suit instead.
